@@ -1,8 +1,9 @@
+import argparse
 from blockchain import Blockchain
-from transactions import record_transaction, transactions
+from transactions import record_transaction
 
 def main():
-    blockchain = Blockchain()
+    blockchain = Blockchain(difficulty=4)  # Adjust difficulty as needed
     
     while True:
         print("\nOptions:")
@@ -31,7 +32,8 @@ def main():
             for block in blockchain.chain:
                 print(f"Block Hash: {block.block_hash}")
                 print(f"Previous Block Hash: {block.prev_block_hash}")
-                print(f"Transactions: {block.transaction_list}\n")
+                print(f"Transactions: {block.transaction_list}")
+                print(f"Nonce: {block.nonce}\n")
         
         elif choice == '4':
             print("Exiting the program.")
