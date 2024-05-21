@@ -2,7 +2,7 @@ from blocks import Block
 from transactions import transactions
 
 class Blockchain:
-    def __init__(self, difficulty=2):
+    def __init__(self, difficulty):
         self.chain = [Block.create_genesis_block("Initial transaction")]
         self.difficulty = difficulty
 

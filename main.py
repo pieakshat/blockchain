@@ -3,7 +3,7 @@ from blockchain import Blockchain
 from transactions import record_transaction
 
 def main():
-    blockchain = Blockchain(difficulty=4)  # Adjust difficulty as needed
+    blockchain = Blockchain(difficulty=4) 
     
     while True:
         print("\nOptions:")
